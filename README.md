@@ -1,30 +1,20 @@
-# Hospital Appointment Booking Website
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-A simple website for hospital online appointment bookings with patient login, appointment requests, admin customization, and payment linking.
+# Run and deploy your AI Studio app
 
-## Features
+This contains everything you need to run your app locally.
 
-- Patient registration and login
-- Appointment booking with department, doctor, date/time, and problem description
-- Admin panel for configuring hospital details, doctors, departments, time slots, and payment URL
-- Appointment request approval and notification log
-- Payment link generation after appointment acceptance
+View your app in AI Studio: https://ai.studio/apps/36395e7d-ee33-4849-85b8-9a1886d6cc82
 
-## Files
+## Run Locally
 
-- `index.html` - patient portal
-- `admin.html` - admin panel
-- `styles.css` - site styling
-- `script.js` - application logic
+**Prerequisites:**  Node.js
 
-## How to use
 
-1. Open `index.html` in a browser.
-2. Register a new patient or use the demo patient credentials:
-   - Username: `patient1`
-   - Password: `patient123`
-3. Open `admin.html` and log in as admin:
-   - Username: `admin`
-   - Password: `admin123`
-4. Configure departments, doctors, slots, and payment settings.
-5. Book appointments as a patient and approve them in the admin panel.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

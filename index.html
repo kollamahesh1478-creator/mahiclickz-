@@ -1,136 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hospital Appointment Booking</title>
-    <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-    <header class="site-header">
-        <div class="brand">
-            <img id="hospitalLogo" class="site-logo hidden" src="" alt="Hospital logo" />
-            <h1 id="hospital-name">Hospital Online Appointments</h1>
-            <p id="hospital-tagline">Book appointments, manage patient care, and get instant payment links.</p>
-        </div>
-        <div class="header-actions">
-            <a class="button secondary" href="admin.html">Admin Login</a>
-            <button class="button" id="logoutButton" hidden>Logout</button>
-        </div>
-    </header>
-
-    <main class="container">
-        <section class="welcome-panel" id="welcomePanel">
-            <div class="card">
-                <h2>Patient Login / Register</h2>
-                <div class="tabs">
-                    <button class="tab active" id="showLogin">Login</button>
-                    <button class="tab" id="showRegister">Register</button>
-                </div>
-
-                <form id="loginForm" class="form">
-                    <label>Username<input type="text" id="loginUsername" required /></label>
-                    <label>Password<input type="password" id="loginPassword" required /></label>
-                    <button type="submit" class="button">Login</button>
-                </form>
-
-                <form id="registerForm" class="form hidden">
-                    <label>Full Name<input type="text" id="registerName" required /></label>
-                    <label>Username<input type="text" id="registerUsername" required /></label>
-                    <label>Password<input type="password" id="registerPassword" required /></label>
-                    <label>Mobile Number<input type="tel" id="registerMobile" required /></label>
-                    <button type="submit" class="button">Register</button>
-                </form>
-            </div>
-        </section>
-
-        <section class="dashboard hidden" id="patientDashboard">
-            <div class="card">
-                <h2>Welcome, <span id="patientName"></span></h2>
-                <p>Use this dashboard to book appointment slots, enter your problem details, and pay online.</p>
-            </div>
-
-            <div class="grid-2">
-                <div class="card" id="profileCard">
-                    <h3>Complete Your Profile</h3>
-                    <form id="profileForm" class="form">
-                        <label>Age<input type="number" id="profileAge" min="1" max="120" required /></label>
-                        <label>Date of Birth<input type="date" id="profileDob" required /></label>
-                        <label>Medical Problem<textarea id="profileProblem" rows="3"
-                                placeholder="Brief description of your medical issue" required></textarea></label>
-                        <button type="submit" class="button">Save Profile</button>
-                    </form>
-                </div>
-
-                <div class="card">
-                    <h3>Book an Appointment</h3>
-                    <form id="appointmentForm" class="form">
-                        <label>Department
-                            <select id="departmentSelect" required></select>
-                        </label>
-                        <label>Doctor
-                            <select id="doctorSelect" required></select>
-                        </label>
-                        <div id="selectedDoctorImage" style="display: none; margin-bottom: 16px;">
-                            <img id="doctorImage" class="doctor-image" alt="Selected Doctor" />
-                        </div>
-                        <label>Preferred Date<input type="date" id="appointmentDate" required /></label>
-                        <label>Preferred Time Slot
-                            <select id="timeSlotSelect" required></select>
-                        </label>
-                        <label>Problem Description<textarea id="problemDescription" rows="4"
-                                placeholder="Describe your symptoms or concern" required></textarea></label>
-                        <label>Payment Method
-                            <select id="paymentMethod" required>
-                                <option value="Credit Card">Credit Card</option>
-                                <option value="UPI">UPI</option>
-                                <option value="Net Banking">Net Banking</option>
-                            </select>
-                        </label>
-                        <button type="submit" class="button">Request Appointment</button>
-                    </form>
-                </div>
-
-                <div class="card">
-                    <h3>Appointment Summary</h3>
-                    <div id="appointmentSummary">No bookings yet. Fill the form to request an appointment.</div>
-                    <div class="notification-banner" id="patientNotification" hidden></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3>Your Appointments</h3>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Doctor</th>
-                            <th>Date</th>
-                            <th>Slot</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="appointmentsTableBody"></tbody>
-                </table>
-            </div>
-
-            <div class="card hidden" id="paymentCard">
-                <h3>Pay for Appointment</h3>
-                <p>Once your request is accepted, use the payment link below.</p>
-                <a class="button" id="paymentLink" target="_blank" rel="noopener">Go to Payment</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <p>Hospital Appointment Booking Website. Customize doctors, departments, slots, and payment information in the
-            admin panel.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-
+    <title>MAHI CLICZ AND CREATIVES - Photography, Video Editing & Color Grading</title>
+    <meta name="description" content="Where every frame tells a captivating story. Professional photography, DaVinci Resolve & Premiere Pro video editing, Shorts/Reels, marriage albums, and thumbnails." />
+    <meta property="og:title" content="MAHI CLICZ AND CREATIVES" />
+    <meta property="og:description" content="Where every frame tells a captivating story. Professional photography and cinematic video editing." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
+
