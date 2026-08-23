@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Hospital Booking</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <img id="hospitalLogo" class="site-logo hidden" src="" alt="Hospital logo" />
+            <h1>Admin Control Panel</h1>
+            <p>Customize the booking portal, manage doctors, departments, and payment links.</p>
+        </div>
+        <div class="header-actions">
+            <a class="button" href="index.html">Patient Portal</a>
+            <button class="button secondary" id="adminLogoutButton" hidden>Logout</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card" id="adminLoginSection">
+            <h2>Admin Login</h2>
+            <form id="adminLoginForm" class="form">
+                <label>Username<input type="text" id="adminUsername" required /></label>
+                <label>Password<input type="password" id="adminPassword" required /></label>
+                <button type="submit" class="button">Login as Admin</button>
+            </form>
+        </section>
+
+        <section id="adminPanel" class="hidden">
+            <div class="card" id="adminManagement" style="display: none;">
+                <h2>Admin User Management</h2>
+                <form id="adminForm" class="form">
+                    <label>Username<input type="text" id="adminUsernameInput" required /></label>
+                    <label>Password<input type="password" id="adminPasswordInput" required /></label>
+                    <label>Full Name<input type="text" id="adminFullNameInput" required /></label>
+                    <button type="submit" class="button secondary">Add Admin</button>
+                </form>
+                <div class="admin-list-card">
+                    <h3>Admin List</h3>
+                    <div id="adminList">No additional admins.</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Hospital Customization</h2>
+                <form id="settingsForm" class="form grid-2">
+                    <label>Hospital Name<input type="text" id="settingsName" required /></label>
+                    <label>Tagline<input type="text" id="settingsTagline" required /></label>
+                    <label>Logo URL<input type="url" id="settingsLogoUrl"
+                            placeholder="https://example.com/logo.png" /></label>
+                    <label>Contact Email<input type="email" id="settingsEmail" required /></label>
+                    <label>Payment Base URL<input type="url" id="settingsPaymentUrl"
+                            placeholder="https://payments.example.com/pay" required /></label>
+                    <label>Notification Message<textarea id="settingsMessage" rows="3"></textarea></label>
+                    <button type="submit" class="button">Save Settings</button>
+                </form>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Departments & Doctors</h3>
+                    <form id="departmentForm" class="form">
+                        <label>New Department<input type="text" id="departmentName" required /></label>
+                        <button type="submit" class="button secondary">Add Department</button>
+                    </form>
+                    <form id="doctorForm" class="form">
+                        <label>Doctor Name<input type="text" id="doctorName" required /></label>
+                        <label>Doctor Specialty<input type="text" id="doctorSpecialty" required /></label>
+                        <label>Doctor Image URL<input type="url" id="doctorImageUrl"
+                                placeholder="https://example.com/doctor.jpg" /></label>
+                        <label>Department<select id="doctorDepartment"></select></label>
+                        <label>Time Slots (comma-separated)<textarea id="doctorTimeSlots" rows="2"
+                                placeholder="09:00 AM - 10:00 AM, 10:30 AM - 11:30 AM"></textarea></label>
+                        <button type="submit" class="button secondary">Add Doctor</button>
+                    </form>
+                    <div class="doctor-list-card">
+                        <h3>Doctor List</h3>
+                        <div id="doctorList">No doctors added yet.</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Pending Appointments</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Patient</th>
+                                <th>Doctor</th>
+                                <th>Date</th>
+                                <th>Slot</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminAppointmentsBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Notification Log</h3>
+                <div id="notificationLog">No notifications sent yet.</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Use this page to configure the website and monitor bookings before sending payment instructions.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
